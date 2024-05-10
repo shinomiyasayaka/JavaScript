@@ -147,12 +147,57 @@
 
 //マウスクリックのイベントには、.click( )もあります。しかし、clickの場合は、クリックされた時点でイベントが終わってしまいます。
 //今回は、クリック後に複数のイベントが行われるようにしたいので、onを付けた以下のような書き方をします。
+//$(function(){
+  //$('.box1').on('click', function(){
+    //$('.box1').addClass('box1-ext');
+  //});
+  //$('.box1').mouseout(function(){
+    //$('.box1').removeClass('box1-ext');
+  //});
+//});
+
+
+
+//(７章)
+//この書き方では、同じ動作をさせるのに、class名のみ異なるイベントを4つも記述しなければならず、少し面倒です。
+//$(function(){
+  //$('.bg1').on('click', function(){
+    //$('.bg1').slideUp();
+  //});
+
+  //$('.bg2').on('click', function(){
+    //$('.bg2').slideUp();
+  //});
+
+  //$('.bg3').on('click', function(){
+    //$('.bg3').slideUp();
+  //});
+
+  //$('.bg4').on('click', function(){
+    //$('.bg4').slideUp();
+  //});
+//});
+
+//「this」...イベントが発生した要素のみ変化させたいときに使います。
+//thisは、「クリックされた要素」を指しています。
+//前のコードでは、それぞれの正方形に個別にclass属性を指定していました。
+//今回のコードでは、「box1クラスの正方形がクリックされたとき、this（クリックされた要素）のみslideUpさせる」という設定
+
+//$(function(){
+  //$('.box1').on('click', function(){
+    //$(this).slideUp();
+  //});
+//});
+
+//「children」...HTML要素直下のすべての子要素を取得するときに使います。
+//リスト（ul要素）の子要素であるli要素内の文字列が、黒色から赤色に変化することを確認できます。
+//７章を参照してHTML・CSS記述
+
 $(function(){
-  $('.box1').on('click', function(){
-    $('.box1').addClass('box1-ext');
-  });
-  $('.box1').mouseout(function(){
-    $('.box1').removeClass('box1-ext');
+  $('button').on('click', function(){
+    $('ul').children().css('color','red');
   });
 });
 
+//「button要素がクリックされたときに、処理を実行してください」の意味
+//.children()は、HTML要素直下のすべての子要素を取得します。ここでのchildrenは「ul要素の子要素」、つまり、li要素が対象

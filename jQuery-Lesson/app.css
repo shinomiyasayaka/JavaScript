@@ -3,12 +3,28 @@
   background-color: #FF0000;
   height: 200px;
   width: 200px;
+  float: left;
 }
 /*display: none;は４・５章で参照*/
 
 
-.box1-ext {
+/*.box1-ext {
   border: 10px solid black;
-}
+}*/
 /*６章参照*/
 
+.bg1 {
+  background-color: #FFAAAA;
+}
+
+.bg2 {
+  background-color: #FFBBBB;
+}
+
+.bg3 {
+  background-color: #FFCCCC;
+}
+
+.bg4 {
+  background-color: #FFDDDD;
+}
