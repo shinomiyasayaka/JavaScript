@@ -4,7 +4,11 @@
   height: 200px;
   width: 200px;
 }
+/*display: none;は４・５章で参照*/
+
 
 .box1-ext {
   border: 10px solid black;
 }
+/*６章参照*/
+
