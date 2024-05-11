@@ -1,0 +1,12 @@
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+:root {
+  --swiper-navigation-color: #ffffff;
+  --swiper-pagination-color: #ffffff;
+}
+
+/*ルート要素（:root）とは、HTMLの最上位要素を指します。*/
+/*変数を使うことで、共通のスタイルを変数にまとめることができます。そして、変数を使ってスタイリングを適用する要素の値を一括変更することができます。*/
